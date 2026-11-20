@@ -1,0 +1,15 @@
+name: More info
+on:
+ push:
+  paths:
+   -'more-info/**'
+
+jobs:
+ deploy:
+  runs-on: ubuntu-latest
+  steps:
+   -uses: actions/checkout@v6
+   -uses: actions/upload-artifact@v7
+    with:
+     name: more-info
+     path: more-info/

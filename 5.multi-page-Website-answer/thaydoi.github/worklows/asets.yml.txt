@@ -1,0 +1,14 @@
+name: Assets
+on:
+ push:
+  paths:
+   -'assets/**'
+jobs:
+ deploy:
+  runs-on: ubuntu-latest
+  steps:
+   -uses: actions/checkout@v6
+   -uses: actions/upload-artifact@v7
+    with:
+     name: assets
+     path: assets/
